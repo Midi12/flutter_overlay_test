@@ -1,16 +1,12 @@
 # flutter_overlay_test
 
-A new Flutter project.
+A Windows Flutter transparent overlay
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a starting point for a Windows Flutter overlay application.
 
-A few resources to get you started if this is your first Flutter project:
+## How does it work ?
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The c++ part of the Windows application (`windows\runner\win32_window.cpp`) have been modified to spawn a topmost transparent window.
+The dart part of the application (`lib\main.dart`) is using a `CustomPainter` widget to draw on a `CustomPaint` canvas. 
